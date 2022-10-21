@@ -13,25 +13,118 @@
             <ColumnDefinition Width="0.4*"/>
             <ColumnDefinition Width="0.6*"/>
         </Grid.ColumnDefinitions>
-        <Border BorderThickness="0 0 1 0">
+        <Border BorderThickness="0 0 1 0" BorderBrush="Black">
             <StackPanel>
-                <Button>
-                    <StackPanel>
-                        <Image Source="/Photo/иконка напитки.png">
-                            
+                <Button BorderBrush="{x:Null}" Background="{x:Null}" HorizontalAlignment="Left">
+                    <Grid Margin="100 30 0 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.3*"/>
+                            <ColumnDefinition Width="0.7*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="/Photo/иконка напитки.png"
+                               MaxHeight="65"
+                               MaxWidth="65">
                         </Image>
                         <TextBlock
-                            Text="Выбор столика"
-                    FontSize="48" 
-                    FontFamily="Geometria"
-                    Margin="60 0 0 0"
-                    >
-
+                            Text="Бар"
+                            FontSize="32" 
+                            FontFamily="Geometria"
+                            Margin="20 0 0 0"
+                            VerticalAlignment="Center"
+                            Grid.Column="1"
+                            >
                         </TextBlock>
-                    </StackPanel>
+                    </Grid>
                 </Button>
-
+                <Button BorderBrush="{x:Null}" Background="{x:Null}" HorizontalAlignment="Left">
+                    <Grid Margin="100 30 0 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.3*"/>
+                            <ColumnDefinition Width="0.7*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="/Photo/иконка горячее.png"
+                               MaxHeight="65"
+                               MaxWidth="65">
+                        </Image>
+                        <TextBlock
+                            Text="Горячие блюда"
+                            FontSize="32" 
+                            FontFamily="Geometria"
+                            Margin="20 0 0 0"
+                            VerticalAlignment="Center"
+                            Grid.Column="1"
+                            >
+                        </TextBlock>
+                    </Grid>
+                </Button>
+                <Button BorderBrush="{x:Null}" Background="{x:Null}" HorizontalAlignment="Left">
+                    <Grid Margin="100 30 0 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.3*"/>
+                            <ColumnDefinition Width="0.7*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="/Photo/иконка десерты.png"
+                               MaxHeight="65"
+                               MaxWidth="65">
+                        </Image>
+                        <TextBlock
+                            Text="Десерты"
+                            FontSize="32" 
+                            FontFamily="Geometria"
+                            Margin="20 0 0 0"
+                            VerticalAlignment="Center"
+                            Grid.Column="1"
+                            >
+                        </TextBlock>
+                    </Grid>
+                </Button>
+                <Button BorderBrush="{x:Null}" Background="{x:Null}" HorizontalAlignment="Left">
+                    <Grid Margin="100 30 0 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.3*"/>
+                            <ColumnDefinition Width="0.7*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="/Photo/иконка салат.png"
+                               MaxHeight="65"
+                               MaxWidth="65">
+                        </Image>
+                        <TextBlock
+                            Text="Салаты"
+                            FontSize="32" 
+                            FontFamily="Geometria"
+                            Margin="20 0 0 0"
+                            VerticalAlignment="Center"
+                            Grid.Column="1"
+                            >
+                        </TextBlock>
+                    </Grid>
+                </Button>
+                <Button BorderBrush="{x:Null}" Background="{x:Null}" HorizontalAlignment="Left">
+                    <Grid Margin="100 30 0 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.3*"/>
+                            <ColumnDefinition Width="0.7*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="/Photo/иконка закуски.png"
+                               MaxHeight="65"
+                               MaxWidth="65">
+                        </Image>
+                        <TextBlock
+                            Text="Закуски"
+                            FontSize="32" 
+                            FontFamily="Geometria"
+                            Margin="20 0 0 0"
+                            VerticalAlignment="Center"
+                            Grid.Column="1"
+                            >
+                        </TextBlock>
+                    </Grid>
+                </Button>
             </StackPanel>
         </Border>
+        <ListView
+            Grid.Column="1" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            
+        </ListView>
     </Grid>
 </Page>
