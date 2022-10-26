@@ -7,6 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="520" d:DesignWidth="1200"
       Title="DishPage">
+    
     <Grid Background="#FFC4FDC4">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.45*"/>
@@ -64,13 +65,31 @@
                     Margin="0 30 0 0"
                 />
             </ScrollViewer>
-            <WrapPanel Margin=" 0 40 0 0">
+            <WrapPanel Margin=" 0 40 0 0"
+                       HorizontalAlignment="Center">
+                <Button Style="{DynamicResource ButtonRound}" Background="#FF73EC73"
+                        MinWidth="190"
+                        MinHeight="90" 
+                        
+                        Margin="0 0 0 0" BorderBrush="{x:Null}">
+                    <TextBlock                     
+                        Text="Назад"
+                        FontSize="20" 
+                        FontFamily="Geometria"
+                        Grid.Row="1"
+                        Foreground="Black"
+                        Margin="0 0 0 0"
+                >
+                    </TextBlock>
+                </Button>
                 <Button Background="#FF73EC73"
                         MinWidth="190"
                         MinHeight="90" 
-                        BorderBrush="#FF2A2A2A">
+                        BorderBrush="{x:Null}"
+                        Style="{DynamicResource ButtonRound}"
+                        Margin="30 0 0 0">
                     <TextBlock                     
-                        Text="Описание"
+                        Text="Добавить"
                         FontSize="20" 
                         FontFamily="Geometria"
                         Grid.Row="1"

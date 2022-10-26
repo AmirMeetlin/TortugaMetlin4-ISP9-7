@@ -131,7 +131,42 @@
             </ListView.ItemsPanel>
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    
+                    <Button Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0.77*"/>
+                                <RowDefinition Height="0.23*"/>
+                            </Grid.RowDefinitions>
+                            <Border
+                    MinHeight="219"
+                    MinWidth="219" Background="#FF73EC73">
+                                <Border Background="White"
+                            Margin="15">
+                                    <Image Source="/image 30.png"
+                               MaxHeight="125"></Image>
+                                </Border>
+                            </Border>
+                            <StackPanel Grid.Row="1" Margin="10 0 0 0">
+                                <TextBlock
+                            Text="Супчег"
+                            FontSize="20" 
+                            FontFamily="Geometria"
+                            VerticalAlignment="Center"
+                            Grid.Row="1" Foreground="Black"
+                            >
+                                </TextBlock>
+                                <TextBlock
+                            Text="9999р."
+                            FontSize="16" 
+                            FontFamily="Geometria"
+                            VerticalAlignment="Center"
+                             Foreground="Black"
+                            >
+                                </TextBlock>
+                            </StackPanel>
+
+                        </Grid>
+                    </Button>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
