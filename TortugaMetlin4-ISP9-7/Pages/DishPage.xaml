@@ -1,0 +1,86 @@
+﻿<Page x:Class="TortugaMetlin4_ISP9_7.Pages.DishPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TortugaMetlin4_ISP9_7.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="520" d:DesignWidth="1200"
+      Title="DishPage">
+    <Grid Background="#FFC4FDC4">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.45*"/>
+            <ColumnDefinition Width="0.2*"/>
+            <ColumnDefinition Width="0.45*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <Border
+                    MaxHeight="400" MaxWidth="430" Background="#FF73EC73" Margin="0 30 0 0" Height="400">
+                <Border Background="White"
+                            Margin="30">
+                    <Image Source="/image 30.png"
+                               MaxHeight="200"></Image>
+                </Border>
+            </Border>
+            <TextBlock
+                Text="9999 р."
+                FontSize="40" 
+                FontFamily="Geometria"              
+                Grid.Row="1" Foreground="Black"
+                Margin="60 15 0 0"
+                >
+            </TextBlock>
+        </StackPanel>
+        <TextBlock
+            Grid.Column="1"          
+                Text="Супчег"
+                FontSize="40" 
+                FontFamily="Geometria"
+                VerticalAlignment="Top"
+                Grid.Row="1" Foreground="Black"
+                Margin="0 30 0 0"
+                >
+        </TextBlock>
+        <StackPanel Grid.Column="2"  >
+            <TextBlock                     
+            Text="Описание"
+            FontSize="20" 
+            FontFamily="Geometria"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Center"
+            Grid.Row="1" Foreground="Black"
+            Margin="0 30 0 0"
+                >
+            </TextBlock>
+            <ScrollViewer Margin="20 20 20 0" MaxHeight="300">
+                <TextBlock                     
+                    Text="Описание dsfdsfds dsfnhg jkhkm trhgfjn hghgjhgf tuy546543 674365j yt4363ur dfsfdsf dsfdsf dsdsfg fdgdfgfdjgufdgkdf kkjfdgdfogod ojgoidsfsdjsjjjdjdjdjjfjahahhahahah hahahah hahah"
+                    FontSize="30" 
+                    TextWrapping="Wrap"
+                    FontFamily="Geometria"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Center"
+                    Grid.Row="1" Foreground="Black"
+                    Margin="0 30 0 0"
+                />
+            </ScrollViewer>
+            <WrapPanel Margin=" 0 40 0 0">
+                <Button Background="#FF73EC73"
+                        MinWidth="190"
+                        MinHeight="90" 
+                        BorderBrush="#FF2A2A2A">
+                    <TextBlock                     
+                        Text="Описание"
+                        FontSize="20" 
+                        FontFamily="Geometria"
+                        Grid.Row="1"
+                        Foreground="Black"
+                        Margin="0 0 0 0"
+                >
+                    </TextBlock>
+                </Button>
+            </WrapPanel>
+        </StackPanel>
+        
+    </Grid>
+</Page>

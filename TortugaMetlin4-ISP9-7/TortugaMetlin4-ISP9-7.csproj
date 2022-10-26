@@ -59,6 +59,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Pages\DishPage.xaml.cs">
+      <DependentUpon>DishPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\MenuPage.xaml.cs">
       <DependentUpon>MenuPage.xaml</DependentUpon>
     </Compile>
@@ -107,6 +110,10 @@
     <Folder Include="EF\" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Pages\DishPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\MenuPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -155,6 +162,9 @@
     <Resource Include="Photo\иконка закуски.png" />
     <Resource Include="Photo\иконка напитки.png" />
     <Resource Include="Photo\иконка салат.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image 30.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
