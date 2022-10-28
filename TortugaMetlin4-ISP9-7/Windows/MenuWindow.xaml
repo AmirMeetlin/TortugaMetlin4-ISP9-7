@@ -25,10 +25,11 @@
                 VerticalAlignment="Center"
                 HorizontalAlignment="Center"
             >
-                <Button Background="{x:Null}" BorderBrush="{x:Null}">
+                <Button Background="{x:Null}" BorderBrush="{x:Null}" x:Name="btnMenu" Click="btnMenu_Click">
                     <TextBlock
                     Text="Меню"
                     FontSize="48" 
+                    x:Name="tbMenu"
                     FontFamily="Geometria" Foreground="LimeGreen"
                     >
                         <TextBlock.Effect>
@@ -41,12 +42,13 @@
                     </TextBlock>
                 </Button>
                
-                <Button Background="{x:Null}" BorderBrush="{x:Null}">
+                <Button Background="{x:Null}" BorderBrush="{x:Null}" x:Name="btnOrder" Click="btnOrder_Click">
                     <TextBlock
                     Text="Мой заказ"
                     FontSize="48" 
                     FontFamily="Geometria"
                     Margin="60 0 0 0"
+                    x:Name="tbOrder"
                     >
                         <TextBlock.Effect>
                             <DropShadowEffect
@@ -57,12 +59,13 @@
                         </TextBlock.Effect>
                     </TextBlock>
                 </Button>
-                <Button Background="{x:Null}" BorderBrush="{x:Null}">
+                <Button Background="{x:Null}" BorderBrush="{x:Null}" x:Name="btnChooseTable" Click="btnChooseTable_Click">
                     <TextBlock
                     Text="Выбор столика"
                     FontSize="48" 
                     FontFamily="Geometria"
                     Margin="60 0 0 0"
+                        x:Name="tbChooseTable"
                     >
                         <TextBlock.Effect>
                             <DropShadowEffect

@@ -9,7 +9,11 @@
       Title="OrderPage">
 
     <Grid Background="#FFC4FDC4">
-        <Border Width="675" Height="440" HorizontalAlignment="Left" Margin="45 0 0 0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="4.5*"/>
+        </Grid.ColumnDefinitions>
+        <Border Width="675" Height="440" HorizontalAlignment="Left" Margin="45,40,0,40">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition/>
@@ -129,8 +133,60 @@
                         </ListView.ItemTemplate>
                     </ListView>
                 </ScrollViewer>
-                
+
             </Grid>
         </Border>
+        <Image Grid.Column="1" Source="/Pages/Пирааттт.png" Width="250" Height="250" Margin="0 0 150 180"></Image>
+        <TextBlock
+                    Text="Итого: "
+                    FontSize="48" 
+                    FontFamily="Geometria"
+                    Margin="50 330 0 0"
+                    x:Name="tbOrder"
+            Grid.Column="1"
+                    >
+            <TextBlock.Effect>
+                <DropShadowEffect
+                              ShadowDepth="4"
+                              Direction="240"
+                              Color="#FF9FC89F"
+                             BlurRadius="4"/>
+            </TextBlock.Effect>
+        </TextBlock>
+        <WrapPanel Margin=" 0 410 0 0"
+                       HorizontalAlignment="Center"
+                   Grid.Column="1">
+            <Button Style="{DynamicResource ButtonRound}" Background="#FF73EC73"
+                        MinWidth="190"
+                        MinHeight="90" 
+                        
+                        Margin="0 0 0 0" BorderBrush="{x:Null}">
+                <TextBlock                     
+                        Text="Назад"
+                        FontSize="20" 
+                        FontFamily="Geometria"
+                        Grid.Row="1"
+                        Foreground="Black"
+                        Margin="0 0 0 0"
+                >
+                </TextBlock>
+            </Button>
+            <Button Background="#FF73EC73"
+                        MinWidth="190"
+                        MinHeight="90" 
+                        BorderBrush="{x:Null}"
+                        Style="{DynamicResource ButtonRound}"
+                        Margin="30 0 0 0">
+                <TextBlock                     
+                        Text="Готово"
+                        FontSize="20" 
+                        FontFamily="Geometria"
+                        Grid.Row="1"
+                        Foreground="Black"
+                        Margin="0 0 0 0"
+                >
+                </TextBlock>
+            </Button>
+        </WrapPanel>
     </Grid>
 </Page>

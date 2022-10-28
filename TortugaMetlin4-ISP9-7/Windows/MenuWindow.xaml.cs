@@ -23,5 +23,26 @@ namespace TortugaMetlin4_ISP9_7.Windows
         {
             InitializeComponent();
         }
+
+        private void btnMenu_Click(object sender, RoutedEventArgs e)
+        {
+            tbOrder.Foreground = new SolidColorBrush(Colors.Black);
+            tbChooseTable.Foreground= new SolidColorBrush(Colors.Black);
+            tbMenu.Foreground=new SolidColorBrush(Colors.LimeGreen);
+        }
+
+        private void btnOrder_Click(object sender, RoutedEventArgs e)
+        {
+            tbOrder.Foreground = new SolidColorBrush(Colors.LimeGreen);
+            tbChooseTable.Foreground = new SolidColorBrush(Colors.Black);
+            tbMenu.Foreground = new SolidColorBrush(Colors.Black);
+        }
+
+        private void btnChooseTable_Click(object sender, RoutedEventArgs e)
+        {
+            tbOrder.Foreground = new SolidColorBrush(Colors.Black);
+            tbChooseTable.Foreground = new SolidColorBrush(Colors.LimeGreen);
+            tbMenu.Foreground = new SolidColorBrush(Colors.Black);
+        }
     }
 }
