@@ -22,6 +22,18 @@ namespace TortugaMetlin4_ISP9_7.Windows
         public ChoiceTableWindow()
         {
             InitializeComponent();
+            List<EF.IDTable> tables = ClassHelper.AppData.Context.IDTable.ToList();
+            foreach (EF.IDTable table in tables)
+            {
+                if (table.IsAvalible == false)
+                {
+                    if (grd.FindName("btn" + table.ID) is Button button)
+                    {
+                        button.IsEnabled = false;
+                        button.
+                    }
+                }
+            }
         }
     }
 }

@@ -86,20 +86,15 @@
                                         </Setter.Value>
                                     </Setter>
                             </Trigger>
-                                <Trigger Property="IsPressed" Value="true">
-                                    <Setter Property="RenderTransformOrigin" Value="0.5, 0.5"/>
-                                    <Setter Property="RenderTransform">
-                                        <Setter.Value>
-                                            <ScaleTransform ScaleX="0.8" ScaleY="0.8"/>
-                                        </Setter.Value>
-                                    </Setter>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="RenderTransformOrigin" Value="0.5, 0.5"/>
+                                <Setter Property="RenderTransform">
+                                    <Setter.Value>
+                                        <ScaleTransform ScaleX="0.8" ScaleY="0.8"/>
+                                    </Setter.Value>
+                                </Setter>
                             </Trigger>
-                                <Trigger Property="IsEnabled" Value="false">
-                                    <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
-                                    <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
-                                    <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
-                                </Trigger>
-                            </ControlTemplate.Triggers>
+                        </ControlTemplate.Triggers>
                         </ControlTemplate>
                     </Setter.Value>
                 </Setter>

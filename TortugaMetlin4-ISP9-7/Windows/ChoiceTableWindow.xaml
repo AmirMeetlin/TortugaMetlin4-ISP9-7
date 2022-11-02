@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="ChoiceTableWindow" Height="800" Width="1200" Background="#FFC4FDC4">
 
-    <Grid>
+    <Grid x:Name="grd">
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
@@ -28,86 +28,89 @@
             Margin="80 0"
             >
         </Image>
-        <Button Style="{DynamicResource ButtonStyleTable}" Background="{x:Null}" BorderBrush="{x:Null}"
-                Margin="70 90 20 0">
-            <Image Source="/Photo/Стол ВИП1.png">
-                
-            </Image>
+        <Button Style="{DynamicResource ButtonStyleTable}" BorderBrush="{x:Null}"
+                Margin="70 90 20 0"
+                Name="btnV1">
+            <Button.Background>
+                <ImageBrush ImageSource="/Photo/Стол ВИП1.png"/>
+            </Button.Background>
         </Button>
-        <Button Style="{DynamicResource ButtonStyleTable}" Background="{x:Null}" BorderBrush="{x:Null}"
+        <Button Style="{DynamicResource ButtonStyleTable}" BorderBrush="{x:Null}"
                 Margin="20 90 70 0"
-                Grid.Column="4">
-            <Image Source="/Photo/Стол ВИП 2.png">
-            </Image>
+                Grid.Column="4" Name="btnV2">
+            <Button.Background>
+                <ImageBrush ImageSource="/Photo/Стол ВИП 2.png"/>
+            </Button.Background>
         </Button>
-        <Button Style="{DynamicResource ButtonStyleTable}" Background="{x:Null}" BorderBrush="{x:Null}"
+        <Button Style="{DynamicResource ButtonStyleTable}" BorderBrush="{x:Null}"
                 Margin="100 70 0 20"
-                Grid.Row="1">
-            <Image Source="/Photo/Стол 1.png">
-            </Image>
+                Grid.Row="1" Name="btn1">
+            <Button.Background>
+                <ImageBrush ImageSource="/Photo/Стол 1.png"/>
+            </Button.Background>
         </Button>
         <Button Style="{DynamicResource ButtonStyleTable}" Background="{x:Null}" BorderBrush="{x:Null}"
                 Margin="100 70 30 20"
                 Grid.Row="1"
-                Grid.Column="1">
+                Grid.Column="1" Name="btn2">
             <Image Source="/Photo/Стол 2.png">
             </Image>
         </Button>
         <Button Style="{DynamicResource ButtonStyleTable}" Background="{x:Null}" BorderBrush="{x:Null}"
                 Margin="70 70 60 20"
                 Grid.Row="1"
-                Grid.Column="2">
-            <Image Source="/Photo/Стол 3.png">
+                Grid.Column="2" Name="btn3">
+            <Image Source="/Photo/Стол 3.png" >
             </Image>
         </Button>
         <Button Style="{DynamicResource ButtonStyleTable}" Background="{x:Null}" BorderBrush="{x:Null}"
                 Margin="40 70 90 20"
                 Grid.Row="1"
-                Grid.Column="3">
+                Grid.Column="3" Name="btn4">
             <Image Source="/Photo/Стол 4.png">
             </Image>
         </Button>
         <Button Style="{DynamicResource ButtonStyleTable}" Background="{x:Null}" BorderBrush="{x:Null}"
                 Margin="0 70 100 20"
                 Grid.Row="1"
-                Grid.Column="4">
+                Grid.Column="4" Name="btn5">
             <Image Source="/Photo/Стол 5.png">
             </Image>
         </Button>
         <Button Style="{DynamicResource ButtonStyleTable}" Background="{x:Null}" BorderBrush="{x:Null}"
                 Margin="100 50 0 40"
-                Grid.Row="2">
+                Grid.Row="2" Name="btn6">
             <Image Source="/Photo/Стол 6.png">
             </Image>
         </Button>
         <Button Style="{DynamicResource ButtonStyleTable}" Background="{x:Null}" BorderBrush="{x:Null}"
                 Margin="100 50 30 40"
                 Grid.Row="2"
-                Grid.Column="1">
+                Grid.Column="1" Name="btn7">
             <Image Source="/Photo/Стол 7.png">
             </Image>
         </Button>
         <Button Style="{DynamicResource ButtonStyleTable}" Background="{x:Null}" BorderBrush="{x:Null}"
                 Margin="70 50 60 40"
                 Grid.Row="2"
-                Grid.Column="2">
+                Grid.Column="2" Name="btn8">
             <Image Source="/Photo/Стол 8.png">
             </Image>
         </Button>
         <Button Style="{DynamicResource ButtonStyleTable}" Background="{x:Null}" BorderBrush="{x:Null}"
                 Margin="40 50 90 40"
                 Grid.Row="2"
-                Grid.Column="3">
+                Grid.Column="3" Name="btn9">
             <Image Source="/Photo/Стол 9.png">
             </Image>
         </Button>
         <Button Style="{DynamicResource ButtonStyleTable}" Background="{x:Null}" BorderBrush="{x:Null}"
                 Margin="0 50 100 40"
                 Grid.Row="2"
-                Grid.Column="4">
+                Grid.Column="4" Name="btn10">
             <Image Source="/Photo/Стол 10.png">
             </Image>
         </Button>
-        
+
     </Grid>
 </Window>
