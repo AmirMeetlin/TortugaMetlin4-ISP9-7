@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using TortugaMetlin4_ISP9_7.ClassHelper;
+using TortugaMetlin4_ISP9_7.Pages;
 
 namespace TortugaMetlin4_ISP9_7.Windows
 {
@@ -22,6 +24,8 @@ namespace TortugaMetlin4_ISP9_7.Windows
         public MenuWindow()
         {
             InitializeComponent();
+            frPages.Content = new MenuPage();
+
         }
 
         private void btnMenu_Click(object sender, RoutedEventArgs e)
@@ -29,6 +33,7 @@ namespace TortugaMetlin4_ISP9_7.Windows
             tbOrder.Foreground = new SolidColorBrush(Colors.Black);
             tbChooseTable.Foreground= new SolidColorBrush(Colors.Black);
             tbMenu.Foreground=new SolidColorBrush(Colors.LimeGreen);
+            frPages.Content = new MenuPage();
         }
 
         private void btnOrder_Click(object sender, RoutedEventArgs e)
@@ -36,6 +41,7 @@ namespace TortugaMetlin4_ISP9_7.Windows
             tbOrder.Foreground = new SolidColorBrush(Colors.LimeGreen);
             tbChooseTable.Foreground = new SolidColorBrush(Colors.Black);
             tbMenu.Foreground = new SolidColorBrush(Colors.Black);
+            frPages.Content = new OrderPage();
         }
 
         private void btnChooseTable_Click(object sender, RoutedEventArgs e)
@@ -43,6 +49,10 @@ namespace TortugaMetlin4_ISP9_7.Windows
             tbOrder.Foreground = new SolidColorBrush(Colors.Black);
             tbChooseTable.Foreground = new SolidColorBrush(Colors.LimeGreen);
             tbMenu.Foreground = new SolidColorBrush(Colors.Black);
+            GlobaVariables.selectedTable.IsAvalible = true;
+            AppData.Context.SaveChanges();
+            this.Close();
         }
+
     }
 }

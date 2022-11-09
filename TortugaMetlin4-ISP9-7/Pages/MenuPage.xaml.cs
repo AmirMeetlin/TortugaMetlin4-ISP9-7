@@ -24,5 +24,31 @@ namespace TortugaMetlin4_ISP9_7.Pages
         {
             InitializeComponent();
         }
+
+        private void btnBar_Click(object sender, RoutedEventArgs e)
+        {
+            tbBar.TextDecorations = TextDecorations.Underline;
+            tbHotDishes.TextDecorations = TextDecorations.Underline;
+        }
+
+        private void btnHotDishes_Click(object sender, RoutedEventArgs e)
+        {
+            tbHotDishes.TextDecorations = TextDecorations.Underline;
+        }
+
+        private void btnDesserts_Click(object sender, RoutedEventArgs e)
+        {
+            tbDesserts.TextDecorations = TextDecorations.Underline;
+        }
+
+        private void btnSalads_Click(object sender, RoutedEventArgs e)
+        {
+            tbSalads.TextDecorations = TextDecorations.Underline;
+        }
+
+        private void btnSnacks_Click(object sender, RoutedEventArgs e)
+        {
+            tbSnacks.TextDecorations = TextDecorations.Underline;
+        }
     }
 }

@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using TortugaMetlin4_ISP9_7.ClassHelper;
 
 namespace TortugaMetlin4_ISP9_7.Windows
 {
@@ -30,10 +31,29 @@ namespace TortugaMetlin4_ISP9_7.Windows
                     if (grd.FindName("btn" + table.ID) is Button button)
                     {
                         button.IsEnabled = false;
-                        button.
+
+                        if (grd.FindName("imgbtn" + table.ID) is Image image)
+                        {
+                            image.Source = new BitmapImage(new Uri("/Windows/Крест.png", UriKind.Relative)) { CreateOptions = BitmapCreateOptions.IgnoreImageCache };
+                        }
+
                     }
                 }
             }
+        }
+
+        private void btn_Click(object sender, RoutedEventArgs e)
+        {
+            string id = (sender as Button).Name;
+            id = id.Remove(0,3);
+            EF.IDTable table = ClassHelper.AppData.Context.IDTable.Where(i => i.ID==id).FirstOrDefault();       
+            table.IsAvalible = false;
+            GlobaVariables.selectedTable = table;
+            ClassHelper.AppData.Context.SaveChanges();
+            MenuWindow menuWindow = new MenuWindow();
+            this.Hide();
+            menuWindow.ShowDialog();
+            this.ShowDialog();
         }
     }
 }

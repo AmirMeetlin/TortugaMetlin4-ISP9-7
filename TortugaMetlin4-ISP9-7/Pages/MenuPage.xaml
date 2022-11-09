@@ -72,7 +72,7 @@
         </Grid.ColumnDefinitions>
         <Border BorderThickness="0 0 1 0" BorderBrush="Black">
             <StackPanel>
-                <Button Style="{DynamicResource ButtonStyleForMenu}" BorderBrush="{x:Null}" Background="{x:Null}" HorizontalAlignment="Left">
+                <Button x:Name="btnBar" Style="{DynamicResource btnsMenuStyle}" BorderBrush="{x:Null}" Background="{x:Null}" HorizontalAlignment="Left" Click="btnBar_Click">
                     <Grid Margin="100 30 0 0">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="0.3*"/>
@@ -83,17 +83,18 @@
                                MaxWidth="65">
                         </Image>
                         <TextBlock
+                            x:Name="tbBar"
                             Text="Бар"
                             FontSize="32" 
                             FontFamily="Geometria"
                             Margin="20 0 0 0"
                             VerticalAlignment="Center"
-                            Grid.Column="1"
+                            Grid.Column="1" FontWeight="Normal" TextDecorations="{x:Null}"
                             >
                         </TextBlock>
                     </Grid>
                 </Button>
-                <Button BorderBrush="{x:Null}" Background="{x:Null}" HorizontalAlignment="Left">
+                <Button x:Name="btnHotDishes" Style="{DynamicResource btnsMenuStyle}" BorderBrush="{x:Null}" Background="{x:Null}" HorizontalAlignment="Left" Click="btnHotDishes_Click">
                     <Grid Margin="100 30 0 0">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="0.3*"/>
@@ -104,6 +105,7 @@
                                MaxWidth="65">
                         </Image>
                         <TextBlock
+                            x:Name="tbHotDishes"
                             Text="Горячие блюда"
                             FontSize="32" 
                             FontFamily="Geometria"
@@ -114,7 +116,7 @@
                         </TextBlock>
                     </Grid>
                 </Button>
-                <Button BorderBrush="{x:Null}" Background="{x:Null}" HorizontalAlignment="Left">
+                <Button x:Name="btnDesserts" Style="{DynamicResource btnsMenuStyle}" BorderBrush="{x:Null}" Background="{x:Null}" HorizontalAlignment="Left" Click="btnDesserts_Click">
                     <Grid Margin="100 30 0 0">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="0.3*"/>
@@ -125,6 +127,7 @@
                                MaxWidth="65">
                         </Image>
                         <TextBlock
+                            x:Name="tbDesserts"
                             Text="Десерты"
                             FontSize="32" 
                             FontFamily="Geometria"
@@ -135,7 +138,7 @@
                         </TextBlock>
                     </Grid>
                 </Button>
-                <Button BorderBrush="{x:Null}" Background="{x:Null}" HorizontalAlignment="Left">
+                <Button x:Name="btnSalads" Style="{DynamicResource btnsMenuStyle}" BorderBrush="{x:Null}" Background="{x:Null}" HorizontalAlignment="Left" Click="btnSalads_Click">
                     <Grid Margin="100 30 0 0">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="0.3*"/>
@@ -146,17 +149,18 @@
                                MaxWidth="65">
                         </Image>
                         <TextBlock
+                            x:Name="tbSalads"
                             Text="Салаты"
                             FontSize="32" 
                             FontFamily="Geometria"
                             Margin="20 0 0 0"
                             VerticalAlignment="Center"
-                            Grid.Column="1"
+                            Grid.Column="1" FontStyle="Normal"
                             >
                         </TextBlock>
                     </Grid>
                 </Button>
-                <Button BorderBrush="{x:Null}" Background="{x:Null}" HorizontalAlignment="Left">
+                <Button x:Name="btnSnacks" Style="{DynamicResource btnsMenuStyle}" BorderBrush="{x:Null}" Background="{x:Null}" HorizontalAlignment="Left" Click="btnSnacks_Click" FontWeight="Normal">
                     <Grid Margin="100 30 0 0">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="0.3*"/>
@@ -167,6 +171,7 @@
                                MaxWidth="65">
                         </Image>
                         <TextBlock
+                            x:Name="tbSnacks"
                             Text="Закуски"
                             FontSize="32" 
                             FontFamily="Geometria"

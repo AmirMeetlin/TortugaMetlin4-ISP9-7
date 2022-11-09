@@ -20,12 +20,12 @@
             Margin="90 30"
             >
         </Image>
-        <Border Grid.Row="1" BorderThickness="0 1 0 1">
+        <Border Grid.Row="1" BorderThickness="0 1 0 1" BorderBrush="Black">
             <WrapPanel
                 VerticalAlignment="Center"
                 HorizontalAlignment="Center"
             >
-                <Button Background="{x:Null}" BorderBrush="{x:Null}" x:Name="btnMenu" Click="btnMenu_Click">
+                <Button Style="{DynamicResource btnsMenuStyle}" Background="{x:Null}" BorderBrush="{x:Null}" x:Name="btnMenu" Click="btnMenu_Click">
                     <TextBlock
                     Text="Меню"
                     FontSize="48" 
@@ -42,13 +42,18 @@
                     </TextBlock>
                 </Button>
                
-                <Button Background="{x:Null}" BorderBrush="{x:Null}" x:Name="btnOrder" Click="btnOrder_Click">
+                <Button Background="{x:Null}"
+                        BorderBrush="{x:Null}" 
+                        x:Name="btnOrder" Click="btnOrder_Click"
+                        Style="{DynamicResource btnsMenuStyle}">
                     <TextBlock
                     Text="Мой заказ"
                     FontSize="48" 
                     FontFamily="Geometria"
                     Margin="60 0 0 0"
-                    x:Name="tbOrder"
+                    x:Name="tbOrder" 
+                    
+
                     >
                         <TextBlock.Effect>
                             <DropShadowEffect
@@ -59,7 +64,11 @@
                         </TextBlock.Effect>
                     </TextBlock>
                 </Button>
-                <Button Background="{x:Null}" BorderBrush="{x:Null}" x:Name="btnChooseTable" Click="btnChooseTable_Click">
+                <Button Background="{x:Null}" 
+                        BorderBrush="{x:Null}"
+                        x:Name="btnChooseTable"
+                        Style="{DynamicResource btnsMenuStyle}"
+                        Click="btnChooseTable_Click">
                     <TextBlock
                     Text="Выбор столика"
                     FontSize="48" 
@@ -76,9 +85,11 @@
                         </TextBlock.Effect>
                     </TextBlock>
                 </Button>
-                
             </WrapPanel>
         </Border>
-        
+        <Frame 
+            x:Name="frPages" NavigationUIVisibility="Hidden"
+            Grid.Row="2"
+            />
     </Grid>
 </Window>
