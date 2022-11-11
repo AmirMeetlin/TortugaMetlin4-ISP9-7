@@ -185,7 +185,8 @@
             </StackPanel>
         </Border>
         <ListView
-            Grid.Column="1" x:Name="lvMenu" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            Grid.Column="1" x:Name="lvMenu" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+            HorizontalContentAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
                     <WrapPanel/>
@@ -204,13 +205,13 @@
                     MinWidth="219" Background="#FF73EC73">
                                 <Border Background="White"
                             Margin="15">
-                                    <Image Source="/image 30.png"
+                                    <Image Source="{Binding PhotoPath}"
                                MaxHeight="125"></Image>
                                 </Border>
                             </Border>
                             <StackPanel Grid.Row="1" Margin="10 0 0 0">
                                 <TextBlock
-                            Text="Супчег"
+                            Text="{Binding Title}"
                             FontSize="20" 
                             FontFamily="Geometria"
                             VerticalAlignment="Center"
@@ -218,7 +219,7 @@
                             >
                                 </TextBlock>
                                 <TextBlock
-                            Text="9999р."
+                            Text="{Binding Cost}"
                             FontSize="16" 
                             FontFamily="Geometria"
                             VerticalAlignment="Center"
@@ -226,7 +227,6 @@
                             >
                                 </TextBlock>
                             </StackPanel>
-
                         </Grid>
                     </Button>
                 </DataTemplate>

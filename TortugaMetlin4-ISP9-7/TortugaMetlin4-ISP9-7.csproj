@@ -245,6 +245,8 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="Pictures\blackWidow.png" />
+    <Resource Include="Pictures\greengolland.png" />
     <Resource Include="Windows\Крест.png" />
   </ItemGroup>
   <ItemGroup>
