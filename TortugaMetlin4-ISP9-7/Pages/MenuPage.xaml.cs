@@ -80,5 +80,16 @@ namespace TortugaMetlin4_ISP9_7.Pages
             idCat = 5;
             lvMenu.ItemsSource = ClassHelper.AppData.Context.Dish.Where(i => i.IDCategory == idCat).ToList();
         }
+
+        private void lvMenu_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if(lvMenu.SelectedItem is EF.Dish)
+            {
+                var position = lvMenu.SelectedItem as EF.Dish;
+                DishPage dishPage = new DishPage(position);
+                NavigationService.Navigate(dishPage);
+            }
+            
+        }
     }
 }

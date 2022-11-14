@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TortugaMetlin4_ISP9_7.ClassHelper;
 
 namespace TortugaMetlin4_ISP9_7.Pages
 {
@@ -23,6 +24,8 @@ namespace TortugaMetlin4_ISP9_7.Pages
         public OrderPage()
         {
             InitializeComponent();
+            lvOrder.ItemsSource = GlobaVariables.ContainerOrder.preOrderList;
+            
         }
     }
 }

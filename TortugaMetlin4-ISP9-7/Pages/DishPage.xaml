@@ -7,7 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="520" d:DesignWidth="1200"
       Title="DishPage">
-    
+
     <Grid Background="#FFC4FDC4">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.45*"/>
@@ -19,12 +19,13 @@
                     MaxHeight="400" MaxWidth="430" Background="#FF73EC73" Margin="0 30 0 0" Height="400">
                 <Border Background="White"
                             Margin="30">
-                    <Image Source="/image 30.png"
+                    <Image x:Name="imgDish" Source="/image 30.png"
                                MaxHeight="200"></Image>
                 </Border>
             </Border>
             <TextBlock
                 Text="9999 р."
+                x:Name="tbPrice"
                 FontSize="40" 
                 FontFamily="Geometria"              
                 Grid.Row="1" Foreground="Black"
@@ -33,30 +34,36 @@
             </TextBlock>
         </StackPanel>
         <TextBlock
-            Grid.Column="1"          
+            Grid.Column="1"
+            x:Name="tbTitle"
                 Text="Супчег"
                 FontSize="40" 
                 FontFamily="Geometria"
                 VerticalAlignment="Top"
                 Grid.Row="1" Foreground="Black"
                 Margin="0 30 0 0"
+            TextWrapping="Wrap"
                 >
         </TextBlock>
-        <StackPanel Grid.Column="2"  >
+        <Grid Grid.Column="2"  >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="6*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
             <TextBlock                     
             Text="Описание"
             FontSize="20" 
             FontFamily="Geometria"
             VerticalAlignment="Top"
-            HorizontalAlignment="Center"
-            Grid.Row="1" Foreground="Black"
-            Margin="0 30 0 0"
-                >
-            </TextBlock>
-            <ScrollViewer Margin="20 20 20 0" MaxHeight="300">
+            HorizontalAlignment="Center" Foreground="Black"
+            Margin="0,30,0,0"
+                />
+            <ScrollViewer Margin="20,20,20,0" MaxHeight="300" Grid.Row="1">
                 <TextBlock                     
                     Text="Описание dsfdsfds dsfnhg jkhkm trhgfjn hghgjhgf tuy546543 674365j yt4363ur dfsfdsf dsfdsf dsdsfg fdgdfgfdjgufdgkdf kkjfdgdfogod ojgoidsfsdjsjjjdjdjdjjfjahahhahahah hahahah hahah"
                     FontSize="30" 
+                    x:Name="tbDescription"
                     TextWrapping="Wrap"
                     FontFamily="Geometria"
                     VerticalAlignment="Top"
@@ -65,13 +72,13 @@
                     Margin="0 30 0 0"
                 />
             </ScrollViewer>
-            <WrapPanel Margin=" 0 40 0 0"
-                       HorizontalAlignment="Center">
+            <WrapPanel Margin="0,0,0,0"
+                       HorizontalAlignment="Center" Grid.Row="2">
                 <Button Style="{DynamicResource ButtonRound}" Background="#FF73EC73"
                         MinWidth="190"
                         MinHeight="90" 
-                        
-                        Margin="0 0 0 0" BorderBrush="{x:Null}">
+                        x:Name="btnBack"
+                        Margin="0 0 0 0" BorderBrush="{x:Null}" Click="btnBack_Click">
                     <TextBlock                     
                         Text="Назад"
                         FontSize="20" 
@@ -87,7 +94,8 @@
                         MinHeight="90" 
                         BorderBrush="{x:Null}"
                         Style="{DynamicResource ButtonRound}"
-                        Margin="30 0 0 0">
+                        x:Name="btnAdd"
+                        Margin="30 0 0 0" Click="btnAdd_Click">
                     <TextBlock                     
                         Text="Добавить"
                         FontSize="20" 
@@ -99,7 +107,7 @@
                     </TextBlock>
                 </Button>
             </WrapPanel>
-        </StackPanel>
-        
+        </Grid>
+
     </Grid>
 </Page>

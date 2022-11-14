@@ -1,4 +1,4 @@
-﻿// Создание кода T4 для модели "C:\Users\IMac9\source\repos\TortugasMetlin\TortugaMetlin4-ISP9-7\EF\Model1.edmx" включено. 
+﻿// Создание кода T4 для модели "C:\Users\Amir\source\repos\TortugaMetlin4-ISP9-7\TortugaMetlin4-ISP9-7\EF\Model1.edmx" включено. 
 // Чтобы включить формирование кода прежних версий, измените значение свойства "Стратегия создания кода" конструктора
 // на "Legacy ObjectContext". Это свойство доступно в окне "Свойства", если модель
 // открыта в конструкторе.

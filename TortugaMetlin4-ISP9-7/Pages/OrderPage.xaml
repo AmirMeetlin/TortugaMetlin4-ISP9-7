@@ -61,13 +61,32 @@
                     >
                 </TextBlock>
                 <ScrollViewer Grid.Row="1" Grid.ColumnSpan="3">
-                    <ListView
+                    <ListView  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                        HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch"
                          x:Name="lvOrder" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
                         <ListView.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <WrapPanel/>
                             </ItemsPanelTemplate>
                         </ListView.ItemsPanel>
+                        <ListView.Resources>
+                            <Style TargetType="ListViewItem">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="ListViewItem">
+                                            <Border Background="{TemplateBinding Background}">
+                                                <ContentPresenter />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </ListView.Resources>
+                        <ListView.ItemContainerStyle>
+                            <Style TargetType="{x:Type ListViewItem}">
+                                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                            </Style>
+                        </ListView.ItemContainerStyle>
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <Grid
@@ -80,16 +99,17 @@
                                         <ColumnDefinition Width="1.5*"/>
                                     </Grid.ColumnDefinitions>
                                     <TextBlock
+                                        HorizontalAlignment="Stretch"
                         x:Name="tbTitle"
                     Grid.Column="0"       
-                    Text="Супицкий супной суп"
+                    Text="{Binding title}"
                     TextWrapping="Wrap"    
                     FontSize="30" 
                     FontFamily="Geometria"
                     Foreground="Black"
                     Margin="20 0 0 0"
                     />
-                                    <WrapPanel Grid.Column="1" Margin="0 0 0 0" HorizontalAlignment="Center">
+                                    <WrapPanel HorizontalAlignment="Stretch" Width="190" Grid.Column="1" Margin="0 0 0 0">
                                         <Button Background="{x:Null}" BorderBrush="{x:Null}">
                                             <TextBlock
                                 x:Name="btnMinus"
@@ -101,7 +121,7 @@
                                         </Button>
                                         <TextBlock
                             x:Name="tbNumber"
-                                Text="0"
+                                Text="{Binding qty}"
                                 FontSize="30" 
                                 FontFamily="Geometria"
                                 Foreground="Black"
@@ -119,14 +139,15 @@
                                         </Button>
                                     </WrapPanel>
                                     <TextBlock
+                                        HorizontalAlignment="Stretch"
+                                        Width="290"
                         x:Name="tbPrice"
                         Grid.Column="2"
-                                Text="9999 руб."
+                                Text="{Binding sum}"
                                 FontSize="30" 
                                 FontFamily="Geometria"
                                 Foreground="Black"
                             Margin="10 3 0 0"
-                        HorizontalAlignment="Center"
                                 />
                                 </Grid>
                             </DataTemplate>

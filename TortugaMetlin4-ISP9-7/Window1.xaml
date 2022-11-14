@@ -18,7 +18,7 @@
                     MinWidth="219" Background="#FF73EC73">
                     <Border Background="White"
                             Margin="15">
-                        <Image Source="/image 30.png"
+                        <Image Source="/Pictures/blackWidow.png"
                                MaxHeight="125"></Image>
                     </Border>
                 </Border>
