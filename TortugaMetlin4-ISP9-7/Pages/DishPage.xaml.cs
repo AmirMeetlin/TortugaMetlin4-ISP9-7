@@ -54,8 +54,16 @@ namespace TortugaMetlin4_ISP9_7.Pages
                 price = position.Cost,
                 qty = 1
             };
-            var orderExists = GlobaVariables.ContainerOrder.preOrderList.Where(i=> i.id =preorder.id ).
-            GlobaVariables.ContainerOrder.preOrderList.Add(preorder);
+            var orderExists = GlobaVariables.ContainerOrder.preOrderList.Where(i => i.id == preorder.id).FirstOrDefault();
+            if(orderExists != null)
+            {
+                orderExists.qty++;
+            }
+            else
+            {
+                GlobaVariables.ContainerOrder.preOrderList.Add(preorder);
+            }
+                
             NavigationService.Navigate(new OrderPage());
         }
     }

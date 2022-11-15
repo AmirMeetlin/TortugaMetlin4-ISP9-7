@@ -82,11 +82,6 @@
                                 </Setter>
                             </Style>
                         </ListView.Resources>
-                        <ListView.ItemContainerStyle>
-                            <Style TargetType="{x:Type ListViewItem}">
-                                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
-                            </Style>
-                        </ListView.ItemContainerStyle>
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <Grid
@@ -95,7 +90,7 @@
                     Margin="0 20 0 0">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="1*"/>
-                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="2*"/>
                                         <ColumnDefinition Width="1.5*"/>
                                     </Grid.ColumnDefinitions>
                                     <TextBlock
@@ -110,9 +105,9 @@
                     Margin="20 0 0 0"
                     />
                                     <WrapPanel HorizontalAlignment="Stretch" Width="190" Grid.Column="1" Margin="0 0 0 0">
-                                        <Button Background="{x:Null}" BorderBrush="{x:Null}">
+                                        <Button x:Name="btnMinus" Background="{x:Null}" BorderBrush="{x:Null}" Click="btnMinus_Click">
                                             <TextBlock
-                                x:Name="btnMinus"
+                                
                                 Text="-"
                                 FontSize="30" 
                                 FontFamily="Geometria"
@@ -127,9 +122,9 @@
                                 Foreground="Black"
                             Margin="10 3 0 0"
                                 />
-                                        <Button Background="{x:Null}" BorderBrush="{x:Null}">
+                                        <Button x:Name="btnPlus" Background="{x:Null}" BorderBrush="{x:Null}" Click="btnPlus_Click">
                                             <TextBlock
-                                x:Name="btnPlus"
+                                
                                 Text="+"
                                 FontSize="30" 
                                 FontFamily="Geometria"
@@ -163,7 +158,7 @@
                     FontSize="48" 
                     FontFamily="Geometria"
                     Margin="50 330 0 0"
-                    x:Name="tbOrder"
+                    x:Name="tbSummary"
             Grid.Column="1"
                     >
             <TextBlock.Effect>
