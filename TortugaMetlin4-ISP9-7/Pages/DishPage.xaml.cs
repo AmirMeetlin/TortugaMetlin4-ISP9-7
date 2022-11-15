@@ -47,21 +47,14 @@ namespace TortugaMetlin4_ISP9_7.Pages
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
-        {
-            //GlobaVariables.preOrder preorder = new GlobaVariables.preOrder({
-            //    title = position.Title,
-            //    id = position.ID,
-            //    price = position.Cost,
-            //    qty = 1
-            //});
+        {           
             GlobaVariables.preOrder preorder = new GlobaVariables.preOrder(){
                 title=position.Title,
                 id = position.ID,
                 price = position.Cost,
                 qty = 1
             };
-            //List<GlobaVariables.preOrder> preorderRow = new List<GlobaVariables.preOrder>();
-            //preorderRow.Add(preorder);
+            var orderExists = GlobaVariables.ContainerOrder.preOrderList.Where(i=> i.id =preorder.id ).
             GlobaVariables.ContainerOrder.preOrderList.Add(preorder);
             NavigationService.Navigate(new OrderPage());
         }

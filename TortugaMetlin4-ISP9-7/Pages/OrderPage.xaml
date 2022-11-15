@@ -63,7 +63,7 @@
                 <ScrollViewer Grid.Row="1" Grid.ColumnSpan="3">
                     <ListView  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                         HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch"
-                         x:Name="lvOrder" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                         x:Name="lvOrder" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" d:ItemsSource="{d:SampleData ItemCount=5}">
                         <ListView.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <WrapPanel/>
