@@ -176,7 +176,8 @@
                         MinWidth="190"
                         MinHeight="90" 
                         
-                        Margin="0 0 0 0" BorderBrush="{x:Null}">
+                        Margin="0 0 0 0" BorderBrush="{x:Null}"
+                    x:Name="btnBack" Click="btnBack_Click">
                 <TextBlock                     
                         Text="Назад"
                         FontSize="20" 
@@ -192,7 +193,7 @@
                         MinHeight="90" 
                         BorderBrush="{x:Null}"
                         Style="{DynamicResource ButtonRound}"
-                        Margin="30 0 0 0">
+                        Margin="30 0 0 0" x:Name="btnSend" Click="btnSend_Click">
                 <TextBlock                     
                         Text="Готово"
                         FontSize="20" 
@@ -200,6 +201,7 @@
                         Grid.Row="1"
                         Foreground="Black"
                         Margin="0 0 0 0"
+                    
                 >
                 </TextBlock>
             </Button>

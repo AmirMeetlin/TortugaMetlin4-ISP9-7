@@ -23,6 +23,27 @@ namespace TortugaMetlin4_ISP9_7.Windows
         public ChoiceTableWindow()
         {
             InitializeComponent();
+            updateTables();
+        }
+
+        private void btn_Click(object sender, RoutedEventArgs e)
+        {
+            string id = (sender as Button).Name;
+            id = id.Remove(0,3);
+            EF.IDTable table = ClassHelper.AppData.Context.IDTable.Where(i => i.ID==id).FirstOrDefault();       
+            table.IsAvalible = false;
+            GlobaVariables.selectedTable = table;
+            ClassHelper.AppData.Context.SaveChanges();
+            MenuWindow menuWindow = new MenuWindow();
+            GlobaVariables.menuWindow = menuWindow;
+            this.Hide();
+            menuWindow.ShowDialog();
+            updateTables();
+            this.ShowDialog();
+        }
+
+        private void updateTables()
+        {
             List<EF.IDTable> tables = ClassHelper.AppData.Context.IDTable.ToList();
             foreach (EF.IDTable table in tables)
             {
@@ -40,20 +61,6 @@ namespace TortugaMetlin4_ISP9_7.Windows
                     }
                 }
             }
-        }
-
-        private void btn_Click(object sender, RoutedEventArgs e)
-        {
-            string id = (sender as Button).Name;
-            id = id.Remove(0,3);
-            EF.IDTable table = ClassHelper.AppData.Context.IDTable.Where(i => i.ID==id).FirstOrDefault();       
-            table.IsAvalible = false;
-            GlobaVariables.selectedTable = table;
-            ClassHelper.AppData.Context.SaveChanges();
-            MenuWindow menuWindow = new MenuWindow();
-            this.Hide();
-            menuWindow.ShowDialog();
-            this.ShowDialog();
         }
     }
 }

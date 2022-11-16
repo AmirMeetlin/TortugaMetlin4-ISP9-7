@@ -245,6 +245,13 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="Pictures\BucketOfSnacks.png" />
+    <Resource Include="Pictures\plateofmeat.png" />
+    <Resource Include="Pictures\greenjelly.png" />
+    <Resource Include="Pictures\tirolcake.png" />
+    <Resource Include="Pictures\cupcakeshmeks.png" />
+    <Resource Include="Pictures\deathPotion.png" />
+    <Resource Include="Pictures\VodkaShot.png" />
     <Resource Include="Pictures\blackWidow.png" />
     <Resource Include="Pictures\greengolland.png" />
     <Resource Include="Windows\Крест.png" />

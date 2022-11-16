@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
+using TortugaMetlin4_ISP9_7.Windows;
 
 namespace TortugaMetlin4_ISP9_7.ClassHelper
 {
@@ -31,6 +32,8 @@ namespace TortugaMetlin4_ISP9_7.ClassHelper
         {
             public static List<preOrder> preOrderList = new List<preOrder>();
         }
+
+        public static MenuWindow menuWindow {get;set;}
 
     }
 }

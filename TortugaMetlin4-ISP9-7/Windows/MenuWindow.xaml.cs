@@ -51,6 +51,7 @@ namespace TortugaMetlin4_ISP9_7.Windows
             tbMenu.Foreground = new SolidColorBrush(Colors.Black);
             GlobaVariables.selectedTable.IsAvalible = true;
             AppData.Context.SaveChanges();
+            GlobaVariables.ContainerOrder.preOrderList = null ;
             this.Close();
         }
 

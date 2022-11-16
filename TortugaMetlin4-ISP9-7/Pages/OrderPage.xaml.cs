@@ -63,5 +63,36 @@ namespace TortugaMetlin4_ISP9_7.Pages
             }
             tbSummary.Text = "Итого: "+sum.ToString();
         }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new MenuPage());
+        }
+
+        private void btnSend_Click(object sender, RoutedEventArgs e)
+        {
+            var resClick = MessageBox.Show("Вы уверены, что готовы оформить заказ?", "Подтверждение", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (resClick == MessageBoxResult.No)
+            {
+                return;
+            }
+            EF.Order order = new EF.Order();
+            order.IDEmpl = 1;
+            order.IDTable = GlobaVariables.selectedTable.ID;
+            AppData.Context.Order.Add(order);
+            AppData.Context.SaveChanges();
+            foreach(GlobaVariables.preOrder Row in GlobaVariables.ContainerOrder.preOrderList)
+            {
+                EF.OrderDish orderDish = new EF.OrderDish();
+                orderDish.IDOrder = order.ID;
+                orderDish.IDDish = Row.id;
+                orderDish.QTY = Row.qty;
+                AppData.Context.OrderDish.Add(orderDish);
+            }
+            AppData.Context.SaveChanges();           
+            MessageBox.Show("Заказ был успешно офрмлен, пожалуйста ожидайте, к вам подойдет официант", "Успех!", MessageBoxButton.OK, MessageBoxImage.Information);
+            GlobaVariables.menuWindow.Close();
+            
+        }
     }
 }

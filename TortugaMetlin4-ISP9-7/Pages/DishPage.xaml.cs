@@ -63,7 +63,9 @@ namespace TortugaMetlin4_ISP9_7.Pages
             {
                 GlobaVariables.ContainerOrder.preOrderList.Add(preorder);
             }
-                
+            GlobaVariables.menuWindow.tbOrder.Foreground = new SolidColorBrush(Colors.LimeGreen);
+            GlobaVariables.menuWindow.tbChooseTable.Foreground = new SolidColorBrush(Colors.Black);
+            GlobaVariables.menuWindow.tbMenu.Foreground = new SolidColorBrush(Colors.Black);
             NavigationService.Navigate(new OrderPage());
         }
     }
