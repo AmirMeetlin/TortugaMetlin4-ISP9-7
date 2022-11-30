@@ -25,20 +25,12 @@ namespace TortugaMetlin4_ISP9_7.Pages
         public DishPage(EF.Dish dish)
         {
             InitializeComponent();
-            if((DateTime.Now.Day == 29 || DateTime.Now.Day == 30 || DateTime.Now.Day == 31)&& DateTime.Now.DayOfWeek.ToString()=="Saturday")
-            {
-                dish.Cost = dish.Cost * Convert.ToDecimal(0.89);
-                tbPrice.Text = dish.Cost.ToString() + "- с учетом скидки 11%";
-            }
-            else
-            {
-                tbPrice.Text = dish.Cost.ToString();
-            }
+            position = dish;
             tbTitle.Text = dish.Title;
-            
+            checkSale();
             tbDescription.Text = dish.Description;
             imgDish.Source = new BitmapImage(new Uri(dish.PhotoPath, UriKind.Relative)); 
-            position = dish;
+            
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
@@ -67,6 +59,19 @@ namespace TortugaMetlin4_ISP9_7.Pages
             GlobaVariables.menuWindow.tbChooseTable.Foreground = new SolidColorBrush(Colors.Black);
             GlobaVariables.menuWindow.tbMenu.Foreground = new SolidColorBrush(Colors.Black);
             NavigationService.Navigate(new OrderPage());
+        }
+
+        private void checkSale()
+        {
+            if ((DateTime.Now.Day == 29 || DateTime.Now.Day == 30 || DateTime.Now.Day == 31) && DateTime.Now.DayOfWeek.ToString() == "Saturday")
+            {
+                position.Cost = position.Cost * Convert.ToDecimal(0.89);
+                tbPrice.Text = position.Cost.ToString() + "- с учетом скидки 11%";
+            }
+            else
+            {
+                tbPrice.Text = position.Cost.ToString();
+            }
         }
     }
 }

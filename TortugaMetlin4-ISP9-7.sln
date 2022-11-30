@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TortugaMetlin4-ISP9-7", "TortugaMetlin4-ISP9-7\TortugaMetlin4-ISP9-7.csproj", "{DF0352FB-B40A-4944-A1B6-108DE4D0F519}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TortugaMetlin4-ISP9-7_Tests", "TortugaMetlin4-ISP9-7_Tests\TortugaMetlin4-ISP9-7_Tests.csproj", "{6F5204AA-7F52-4730-9E34-3CB2D13A15F9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{DF0352FB-B40A-4944-A1B6-108DE4D0F519}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF0352FB-B40A-4944-A1B6-108DE4D0F519}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF0352FB-B40A-4944-A1B6-108DE4D0F519}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F5204AA-7F52-4730-9E34-3CB2D13A15F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F5204AA-7F52-4730-9E34-3CB2D13A15F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F5204AA-7F52-4730-9E34-3CB2D13A15F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F5204AA-7F52-4730-9E34-3CB2D13A15F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

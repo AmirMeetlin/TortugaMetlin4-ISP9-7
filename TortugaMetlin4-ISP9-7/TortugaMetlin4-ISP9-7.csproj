@@ -70,6 +70,7 @@
     </Compile>
     <Compile Include="ClassHelper\AppData.cs" />
     <Compile Include="ClassHelper\GlobaVariables.cs" />
+    <Compile Include="ClassHelper\SaleClass.cs" />
     <Compile Include="EF\Category.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
