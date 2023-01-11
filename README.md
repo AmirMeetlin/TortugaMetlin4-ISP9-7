@@ -1,4 +1,4 @@
- <h1>Описание БД + UseCase</h1>
+ <h1>Описание основных моментов связанных с приложеним</h1>
  
  <h2>База данных Tortuga</h2>
  
@@ -47,3 +47,7 @@
 <h1>UseCase</h1>
 
  ![usecase](https://user-images.githubusercontent.com/81183605/211884444-c6e8e303-7fb1-4bf4-bdfb-92b9028479fd.png)
+ 
+ <h1>Структура проекта</h1>
+ ![image](https://user-images.githubusercontent.com/81183605/211898142-39a6ed86-3df9-4d3d-abf0-3a53d3329d85.png)
+
