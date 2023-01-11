@@ -49,5 +49,6 @@
  ![usecase](https://user-images.githubusercontent.com/81183605/211884444-c6e8e303-7fb1-4bf4-bdfb-92b9028479fd.png)
  
  <h1>Структура проекта</h1>
+ 
  ![image](https://user-images.githubusercontent.com/81183605/211908018-6c54142d-b338-477d-b553-0fc2c8517a6d.png)
 
