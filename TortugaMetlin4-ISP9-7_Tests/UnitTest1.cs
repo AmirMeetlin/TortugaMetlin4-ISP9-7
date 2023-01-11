@@ -51,17 +51,57 @@ namespace TortugaMetlin4_ISP9_7_Tests
         }
 
         [TestMethod]
-        public void countSale_OrderWithIncorrectDayOfWeek_ReturnTrue()
+        public void countSale_OrderWithMinusDayOfMonth_ReturnFalse()
         {
             //AVERAGE
-            int dayOfMonth = 29;
+            int dayOfMonth = -1;
             decimal Cost = 1000;
-            string dayOfWeek = "Sunday";
+            string dayOfWeek = "Saturday";
             decimal ex = 1000;
             //ACT
             decimal fct = SaleClass.countSale(dayOfMonth, Cost, dayOfWeek);
             //ASSERT
-            Assert.AreEqual(ex, fct);
+            Assert.AreNotEqual(ex, fct);
+        }
+
+        [TestMethod]
+        public void countSale_OrderWithDayOfMonthMoreThan31_ReturnFalse()
+        {
+            //AVERAGE
+            int dayOfMonth = 32;
+            decimal Cost = 1000;
+            string dayOfWeek = "Saturday";
+            decimal ex = 1000;
+            //ACT
+            decimal fct = SaleClass.countSale(dayOfMonth, Cost, dayOfWeek);
+            //ASSERT
+            Assert.AreNotEqual(ex, fct);
+        }
+        [TestMethod]
+        public void countSale_OrderWithMinusCost_ReturnFalse()
+        {
+            //AVERAGE
+            int dayOfMonth = 29;
+            decimal Cost = -1000;
+            string dayOfWeek = "Saturday";
+            decimal ex = 1000;
+            //ACT
+            decimal fct = SaleClass.countSale(dayOfMonth, Cost, dayOfWeek);
+            //ASSERT
+            Assert.AreNotEqual(ex, fct);
+        }
+        [TestMethod]
+        public void countSale_OrderWithNotDayOfWeek_ReturnFalse()
+        {
+            //AVERAGE
+            int dayOfMonth = 29;
+            decimal Cost = 1000;
+            string dayOfWeek = "Aboba";
+            decimal ex = 1000;
+            //ACT
+            decimal fct = SaleClass.countSale(dayOfMonth, Cost, dayOfWeek);
+            //ASSERT
+            Assert.AreNotEqual(ex, fct);
         }
     }
 }

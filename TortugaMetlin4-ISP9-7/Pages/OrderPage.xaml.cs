@@ -56,12 +56,16 @@ namespace TortugaMetlin4_ISP9_7.Pages
 
         private void CountSum()
         {
-            decimal sum = 0;
-            foreach(GlobaVariables.preOrder Row in GlobaVariables.ContainerOrder.preOrderList)
+            if (GlobaVariables.ContainerOrder.preOrderList != null)
             {
-                sum+=Row.sum;
+                decimal sum = 0;
+                foreach (GlobaVariables.preOrder Row in GlobaVariables.ContainerOrder.preOrderList)
+                {
+                    sum += Row.sum;
+                }
+                tbSummary.Text = "Итого: " + sum.ToString();
             }
-            tbSummary.Text = "Итого: "+sum.ToString();
+           
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
@@ -71,28 +75,34 @@ namespace TortugaMetlin4_ISP9_7.Pages
 
         private void btnSend_Click(object sender, RoutedEventArgs e)
         {
-            var resClick = MessageBox.Show("Вы уверены, что готовы оформить заказ?", "Подтверждение", MessageBoxButton.YesNo, MessageBoxImage.Question);
-            if (resClick == MessageBoxResult.No)
+            if (GlobaVariables.ContainerOrder.preOrderList.Count() != 0)
             {
-                return;
+                var resClick = MessageBox.Show("Вы уверены, что готовы оформить заказ?", "Подтверждение", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                if (resClick == MessageBoxResult.No)
+                {
+                    return;
+                }
+                EF.Order order = new EF.Order();
+                order.IDEmpl = 1;
+                order.IDTable = GlobaVariables.selectedTable.ID;
+                AppData.Context.Order.Add(order);
+                AppData.Context.SaveChanges();
+                foreach (GlobaVariables.preOrder Row in GlobaVariables.ContainerOrder.preOrderList)
+                {
+                    EF.OrderDish orderDish = new EF.OrderDish();
+                    orderDish.IDOrder = order.ID;
+                    orderDish.IDDish = Row.id;
+                    orderDish.QTY = Row.qty;
+                    AppData.Context.OrderDish.Add(orderDish);
+                }
+                AppData.Context.SaveChanges();
+                MessageBox.Show("Заказ был успешно офрмлен, пожалуйста ожидайте, к вам подойдет официант", "Успех!", MessageBoxButton.OK, MessageBoxImage.Information);
+                GlobaVariables.menuWindow.Close();
             }
-            EF.Order order = new EF.Order();
-            order.IDEmpl = 1;
-            order.IDTable = GlobaVariables.selectedTable.ID;
-            AppData.Context.Order.Add(order);
-            AppData.Context.SaveChanges();
-            foreach(GlobaVariables.preOrder Row in GlobaVariables.ContainerOrder.preOrderList)
+            else
             {
-                EF.OrderDish orderDish = new EF.OrderDish();
-                orderDish.IDOrder = order.ID;
-                orderDish.IDDish = Row.id;
-                orderDish.QTY = Row.qty;
-                AppData.Context.OrderDish.Add(orderDish);
+                MessageBox.Show("Ваш заказ пуст", "Внимание!", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
-            AppData.Context.SaveChanges();           
-            MessageBox.Show("Заказ был успешно офрмлен, пожалуйста ожидайте, к вам подойдет официант", "Успех!", MessageBoxButton.OK, MessageBoxImage.Information);
-            GlobaVariables.menuWindow.Close();
-            
         }
     }
 }
