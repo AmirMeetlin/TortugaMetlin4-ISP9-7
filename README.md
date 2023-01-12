@@ -2,6 +2,8 @@
  
  <h2>База данных Tortuga</h2>
  
+ ![image](https://user-images.githubusercontent.com/81183605/212114458-a8a82de0-8f82-4664-b403-7e1b932517fb.png)
+
  <h2>Dish(Блюдо)</h2>
  
  ![image](https://user-images.githubusercontent.com/81183605/211885584-560512a1-b360-49d5-bbf6-7c0e41d88f51.png)
